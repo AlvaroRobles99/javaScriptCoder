@@ -1,7 +1,7 @@
 const datoUsuarioGuardado = "Agus99"
 const datoContraseñaGuardado = "Contraseña123"
 
-let pregunta = confirm("¿Desea ingresar con un usuario ya creado?")
+let pregunta = confirm("¿Desea ingresar con un usuario existente?")
 
  if(pregunta === true){
     login()
@@ -9,7 +9,7 @@ let pregunta = confirm("¿Desea ingresar con un usuario ya creado?")
 
  function login(){
     let nombreUsuario = prompt("Ingrese su nombre de usuario")
-    let contraseñaUsuario = prompt("Ingrese contraseña")
+    let contraseñaUsuario = prompt("Ingrese su contraseña")
     if(nombreUsuario === datoUsuarioGuardado && contraseñaUsuario === datoContraseñaGuardado){
        bienvenida(nombreUsuario)
     } else {
