@@ -7,13 +7,13 @@ btnLogin.addEventListener("click", function (event) {
     if (pregunta === true) {
         login()
     }
-
 })
 
 function login() {
+   
     let nombreUsuario = prompt("Ingrese su nombre de usuario").trim()
     let contraseñaUsuario = prompt("Ingrese su contraseña").trim()
-
+   
     if (nombreUsuario === usuario1.nombreDeUsuario && contraseñaUsuario === usuario1.contraseñaDeUsuario || nombreUsuario === usuario2.nombreDeUsuario && contraseñaUsuario === usuario2.contraseñaDeUsuario) {
         bienvenida(nombreUsuario)
     } else {
@@ -21,7 +21,6 @@ function login() {
         if (nuevoIntento === true) {
             login()
         }
-
     }
 }
 
