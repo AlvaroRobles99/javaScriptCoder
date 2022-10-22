@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+}
+
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    font-size: xx-large;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(0, 0, 0, 0.120);
+    color: aliceblue;
+    margin: 3rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+nav {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.411);
+
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.botonlogin {
+    background-color:#555555;;
+    color: aliceblue;
+    padding: 0.75rem;
+    border-color: rgb(124, 121, 120);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    font-weight: 900;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+
+}
+
+.botonlogin:hover {
+    background-color: rgb(124, 121, 120);
+    border-color: rgba(0, 0, 0, 0.623);
+
+}
+
+li {
+    margin: 0.3rem;
+    padding: 0.3rem;
+
+}
+
+a{
+    text-decoration: none;
+    color: #fdfdfd;
+    font-size: larger;
+    font-weight: 800;
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.120);
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+p {
+    text-align: center;
+    padding: 0.3rem;
+    margin: 1rem;
+
+    
+   
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.411);
+    color: aliceblue;
+    margin-top: 100%;
+
+}
+body{
+    background-color: rgba(0, 0, 0, 0.644);
+}
+h2{
+    text-align: center;
+    margin-top: 1rem;
+}
+.contendorProductos{
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+}
+h4{
+    margin-bottom: 1rem;
+    color: black;
+}
+.tarjetasGraficas{
+    background-color: #fdfdfd;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-color: black;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+.tarjetasGraficas p {
+    color: black;
+}
+.botonAddCarrito{
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+.botonAddCarrito:hover{
+    background-color: #929292;
+}
+.botonRegistro{
+    background-color:#555555;;
+    color: aliceblue;
+    padding: 0.75rem;
+    border-color: rgb(124, 121, 120);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    font-weight: 900;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+}
+.botonRegistro:hover{
+    background-color: rgb(124, 121, 120);
+    border-color: rgba(0, 0, 0, 0.623);
+}

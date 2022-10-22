@@ -1,27 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilos.css">
     <title>Proyecto JavaScript</title>
-    <script defer src="./js/index.js"></script>
+    <script defer src="./js/variables.js"></script>
+    <script defer src="./js/login.js"></script>
+    <script defer src="./js/tienda.js"></script>
+    
 </head>
-<body>
-    <h1>Ingreso a la pagina con usuario y compra</h1>
-    <p>
-        nombre de usuario:Agus99
-        contraseña:Contraseña123
-    </p>
-    <p>
-       Cuando un usuario entre a la web se le va a preguntar si desea ingresar con usuario y contraseña ya creados.
-       Se simula que ya la tiene creada por lo tanto los datos  se encuentran guardados.
-    </p>
 
-    <p>
-        en la segunda parte la del ciclo pregunta si quiere 
-        comprar chocolate, la cantidad y si desea modificar la cantidad, dependiendo 
-        de la respuesta sigue el ciclo o no
-    </p>
+<body>
+    <header>
+
+        <nav>
+            <ul>
+                <li>
+                    <button class="botonlogin">LOG IN</button>
+                </li>
+                <li>
+                    <button class="botonRegistro">REGISTRARSE</button>
+                </li>
+                <li>
+                    <a class="inicio" href="index.html">Inicio</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <h1>Ingreso a la pagina con usuario y compra</h1>
+        <section>
+            <p>
+                nombre de usuario: <strong>Agus99</strong>
+                contraseña: <strong>Contraseña123</strong>
+            </p>
+            <p>
+                Cuando un usuario entre a la web se le va a preguntar si desea ingresar con usuario y contraseña ya
+                creados.
+                Se simula que ya la tiene creada por lo tanto los datos se encuentran guardados.
+            </p>
+
+            <p>
+                en la segunda parte la del ciclo pregunta si quiere
+                comprar chocolate, la cantidad y si desea modificar la cantidad, dependiendo
+                de la respuesta sigue el ciclo o no
+            </p>
+        </section>
+        <section>
+            <h2>TIENDA</h2>
+            <p>En esta seccion se simula una tienda de compobnentes de computacion mas especifico tarjetas graficas con
+                los productos listados en un array </p>
+            <div class="contendorProductos">
+                <div class="tarjetasGraficas">
+                    <h4>AMD rx570 8gb</h4>
+                    <img src="./imagenes/rx570-8gb.jpg" alt="tarjeta grafica amd rx570 8gb">
+                    <p>$55560</p>
+                    <button class="botonAddCarrito">Agregar a carrito</button>
+                </div>
+                <div class="tarjetasGraficas">
+                    <h4>AMD rx6500XT 4gb</h4>
+                    <img src="./imagenes/rx6500XT-4gb.jpg" alt="tarjeta grafica amd rx6500XT 4gb">
+                    <p>$57960</p>
+                    <button class="botonAddCarrito">Agregar a carrito</button>
+                </div>
+                <div class="tarjetasGraficas">
+                    <h4>AMD rx6600 8gb</h4>
+                    <img src="./imagenes/rx6600-8gb.jpg" alt="tarjeta grafica amd rx6600 8gb">
+                    <p>$79500</p>
+                    <button class="botonAddCarrito">Agregar a carrito</button>
+                </div>
+                <div class="tarjetasGraficas">
+                    <h4>AMD rx6700XT 12gb</h4>
+                    <img src="./imagenes/rx6700XT-12gb.jpg" alt="tarjeta grafica amd rx6700XT 12gb">
+                    <p>$115000</p>
+                    <button class="botonAddCarrito">Agregar a carrito</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            este es el footerr inserte info aqui
+        </p>
+    </footer>
 </body>
+
 </html>
