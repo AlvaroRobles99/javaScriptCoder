@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Proyecto JavaScript</title>
-    <script defer src="./js/variables.js"></script>
-    <script defer src="./js/login.js"></script>
+    <script  src="./js/arrayProductos.js"></script>
     <script defer src="./js/tienda.js"></script>
+    <script defer src="./js/login.js"></script>
+    
     
 </head>
 
@@ -19,7 +20,7 @@
         <nav>
             <ul>
                 <li>
-                    <button class="botonlogin">LOG IN</button>
+                    <button class="botonlogin">INICIAR SESION</button>
                 </li>
                 <li>
                     <button class="botonRegistro">REGISTRARSE</button>
@@ -27,6 +28,9 @@
                 <li>
                     <a class="inicio" href="index.html">Inicio</a>
                 </li>
+            </ul>
+            <ul>
+                <a class="iconCarrito" href="./secciones/carritoDeCompra.html"><img src="./imagenes/icons8-carrito-de-la-compra-cargado-64.png" alt="ir a carrito"></a>
             </ul>
         </nav>
     </header>
@@ -38,7 +42,7 @@
                 nombre de usuario: <strong>Agus99</strong>
                 contraseña: <strong>Contraseña123</strong>
             </p>
-            <p>
+            <p class="parrafo">
                 Cuando un usuario entre a la web se le va a preguntar si desea ingresar con usuario y contraseña ya
                 creados.
                 Se simula que ya la tiene creada por lo tanto los datos se encuentran guardados.
@@ -52,32 +56,11 @@
             <h2>TIENDA</h2>
             <p>En esta seccion se simula una tienda de compobnentes de computacion mas especifico tarjetas graficas con
                 los productos listados en un array </p>
-            <div class="contendorProductos">
-                <div class="tarjetasGraficas">
-                    <h4>AMD rx570 8gb</h4>
-                    <img src="./imagenes/rx570-8gb.jpg" alt="tarjeta grafica amd rx570 8gb">
-                    <p>$55560</p>
-                    <button class="botonAddCarrito">Agregar a carrito</button>
-                </div>
-                <div class="tarjetasGraficas">
-                    <h4>AMD rx6500XT 4gb</h4>
-                    <img src="./imagenes/rx6500XT-4gb.jpg" alt="tarjeta grafica amd rx6500XT 4gb">
-                    <p>$57960</p>
-                    <button class="botonAddCarrito">Agregar a carrito</button>
-                </div>
-                <div class="tarjetasGraficas">
-                    <h4>AMD rx6600 8gb</h4>
-                    <img src="./imagenes/rx6600-8gb.jpg" alt="tarjeta grafica amd rx6600 8gb">
-                    <p>$79500</p>
-                    <button class="botonAddCarrito">Agregar a carrito</button>
-                </div>
-                <div class="tarjetasGraficas">
-                    <h4>AMD rx6700XT 12gb</h4>
-                    <img src="./imagenes/rx6700XT-12gb.jpg" alt="tarjeta grafica amd rx6700XT 12gb">
-                    <p>$115000</p>
-                    <button class="botonAddCarrito">Agregar a carrito</button>
-                </div>
-
+            <div class="contendorProductosAMD">
+                
+            </div>
+            <div class="contendorProductosNvidia">
+                
             </div>
         </section>
     </main>

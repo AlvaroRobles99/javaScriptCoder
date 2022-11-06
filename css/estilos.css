@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     border: 0;
-
 }
 
 html {
@@ -17,20 +16,21 @@ h1 {
     background-color: rgba(0, 0, 0, 0.120);
     color: aliceblue;
     margin: 3rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 nav {
     display: flex;
     background-color: rgba(0, 0, 0, 0.411);
-
 }
 
 ul {
     display: flex;
-    align-items: center;
     width: 100%;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .botonlogin {
@@ -46,19 +46,16 @@ ul {
     text-decoration: none;
     display: inline-block;
     border: none;
-
 }
 
 .botonlogin:hover {
     background-color: rgb(124, 121, 120);
     border-color: rgba(0, 0, 0, 0.623);
-
 }
 
 li {
     margin: 0.3rem;
     padding: 0.3rem;
-
 }
 
 a{
@@ -81,16 +78,12 @@ section {
 p {
     text-align: center;
     padding: 0.3rem;
-    margin: 1rem;
-
-    
-   
+    margin: 1rem;   
 }
 footer{
     background-color: rgba(0, 0, 0, 0.411);
     color: aliceblue;
     margin-top: 100%;
-
 }
 body{
     background-color: rgba(0, 0, 0, 0.644);
@@ -99,24 +92,35 @@ h2{
     text-align: center;
     margin-top: 1rem;
 }
-.contendorProductos{
+.contendorProductosAMD{
     display: flex;
-    flex-direction: row;
-    align-content: stretch;
-    flex-wrap: wrap;
-    justify-content: space-evenly
+    flex-flow: row wrap;
+    place-content: stretch space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.contendorProductosNvidia{
+    display: flex;
+    flex-flow: row wrap;
+    place-content: stretch space-evenly;
+    flex-direction: column;
+    align-items: center;
 }
 h4{
     margin-bottom: 1rem;
     color: black;
 }
 .tarjetasGraficas{
+    display: flex;
     background-color: #fdfdfd;
     padding: 1rem;
     margin-top: 1rem;
     border-color: black;
     margin-bottom: 1rem;
     border-radius: 1rem;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
 }
 .tarjetasGraficas p {
     color: black;
@@ -132,6 +136,7 @@ h4{
     font-size: 16px;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
+    border-radius: 1rem;
 }
 .botonAddCarrito:hover{
     background-color: #929292;
@@ -153,4 +158,11 @@ h4{
 .botonRegistro:hover{
     background-color: rgb(124, 121, 120);
     border-color: rgba(0, 0, 0, 0.623);
+}
+.iconCarrito img{
+    width: 50px;
+    
+}
+nav{
+    display: flex;
 }

@@ -1,31 +1,56 @@
-const productosListados = [
-    {
-        nombre: "AMD rx570 8gb", precio: 55560, stock: 2
-    },
-    {
-        nombre: "AMD rx6500XT 4gb", precio: 57960, stock: 3
-    },
-    {
-        nombre: "AMD rx6600 8gb", precio: 79500, stock: 2
-    },
-    {
-        nombre: "AMD rx6700XT 12gb", precio: 115000, stock: 1
-    }]
 
-// let preguntaTienda = confirm("¿Quiere comprar una tarjeta grafica?")
-if (preguntaTienda === true) {
-    tienda()
+const carrito = []
+const tiendaAMD = document.querySelector("div.contendorProductosAMD")
+const tiendaNvidia = document.querySelector("div.contendorProductosNvidia")
+const plantillaProducto = (tarjeta) => {
+    return ` <div class="tarjetasGraficas">
+              <h4>${tarjeta.nombre}</h4>
+              <img loading="lazy" src="${tarjeta.imagen}" alt="${tarjeta.nombre}">
+              <p>$${tarjeta.precio}</p>
+              <button class="botonAddCarrito" id="${tarjeta.id}">AGREGAR A CARRITO</button>
+             </div>`
+}
+const agregarAlCarritoAMD = (btnId) => {
+    if (btnId <= 7) {
+        let tarjetaSumar = tarjetasVideoAMD.find(tarjeta => tarjeta.id == btnId)
+
+        carrito.push(tarjetaSumar)
+        console.clear()
+        console.table(carrito)
+    } else {
+        let tarjetaSumar = tarjetasVideoNvidia.find(tarjeta => tarjeta.id == btnId)
+        carrito.push(tarjetaSumar)
+        console.clear()
+        console.table(carrito)
+    }
 }
 
-
-
-function tienda() {
-    do {
-        preguntarCompra = parseInt(prompt("¿cuatos desea comprar?"))
-        respuestaSeguirComprando = confirm("¿desea cambiar la cantidad?")
-    }
-    while (respuestaSeguirComprando === true) {
-        alert("gracias por su compra")
-    }
+const cargarTiendaAMD = () => {
+    tiendaAMD.innerHTML = ""
+    tarjetasVideoAMD.forEach(tarjeta => {
+        if (tarjeta.stock != 0) {
+            tiendaAMD.innerHTML += plantillaProducto(tarjeta)
+        }
+    })
 
 }
+
+const cargarTiendaNvidia = () => {
+    tiendaNvidia.innerHTML = ""
+    tarjetasVideoNvidia.forEach(tarjeta => {
+        if (tarjeta.stock != 0) {
+            tiendaNvidia.innerHTML += plantillaProducto(tarjeta)
+        }
+    })
+}
+cargarTiendaAMD()
+cargarTiendaNvidia()
+const botonesSumarCarrito = () => {
+    const btnAddCarrito = document.querySelectorAll(".botonAddCarrito")
+    btnAddCarrito.forEach(boton => {
+        boton.addEventListener("click", () => {
+            agregarAlCarritoAMD(boton.id)
+        })
+    })
+}
+botonesSumarCarrito()
