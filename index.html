@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Proyecto JavaScript</title>
-    <script  src="./js/arrayProductos.js"></script>
+    <script src="./js/arrayProductos.js"></script>
     <script defer src="./js/tienda.js"></script>
     <script defer src="./js/login.js"></script>
-    
-    
+
+
 </head>
 
 <body>
@@ -22,45 +22,53 @@
                 <li>
                     <button class="botonlogin">INICIAR SESION</button>
                 </li>
-                <li>
-                    <button class="botonRegistro">REGISTRARSE</button>
-                </li>
+                <li class="botonRegistro">REGISTRARSE</li>
                 <li>
                     <a class="inicio" href="index.html">Inicio</a>
                 </li>
-            </ul>
-            <ul>
-                <a class="iconCarrito" href="./secciones/carritoDeCompra.html"><img src="./imagenes/icons8-carrito-de-la-compra-cargado-64.png" alt="ir a carrito"></a>
+                <li>
+                    <a class="iconCarrito" href="./secciones/carritoDeCompra.html"><img
+                            src="./imagenes/icons8-carrito-de-la-compra-cargado-64.png" alt="ir a carrito"></a>
+                </li>
             </ul>
         </nav>
     </header>
+    <h1>Ingreso a la pagina con usuario y compra</h1>
     <main>
-
-        <h1>Ingreso a la pagina con usuario y compra</h1>
-        <section>
-            <p>
-                nombre de usuario: <strong>Agus99</strong>
-                contraseña: <strong>Contraseña123</strong>
-            </p>
-            <p class="parrafo">
-                Cuando un usuario entre a la web se le va a preguntar si desea ingresar con usuario y contraseña ya
-                creados.
-                Se simula que ya la tiene creada por lo tanto los datos se encuentran guardados.
-            </p>
-
-            <p>
-                
-            </p>
+        <section class="sidebar">
+            <h2>
+                FILTRAR
+            </h2>
+            <button class="botonVerTodo">
+                VER TODO
+            </button>
+            <h3>
+                POR MARCA
+            </h3>
+            <button class="botonAMDF">
+                PLACAS DE VIDEO AMD
+            </button>
+            <button class="botonNvidiaF">
+                PLACAS DE VIDEO NVIDIA
+            </button>
+            <h3>POR PRECIO</h3>
+            <button class="botonMayorF">
+                DE MAYOR
+            </button>
+            <button class="botonMenorF">
+                DE MENOR
+            </button>
         </section>
         <section>
             <h2>TIENDA</h2>
             <p>En esta seccion se simula una tienda de compobnentes de computacion mas especifico tarjetas graficas con
                 los productos listados en un array </p>
+                <div class="contenedorProductosPrecio"></div>
             <div class="contendorProductosAMD">
-                
+
             </div>
             <div class="contendorProductosNvidia">
-                
+
             </div>
         </section>
     </main>

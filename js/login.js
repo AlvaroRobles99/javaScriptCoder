@@ -14,26 +14,21 @@ const btnLogin = document.querySelector(".botonlogin")
 
 btnLogin.addEventListener("click", function (event) {
     let pregunta = confirm("¿Desea ingresar con un usuario existente?")
-
-    if (pregunta === true) {
-        login()
-    }
-})
+    if (pregunta === true) {login()}})
 
 const login = () => {
-    let nombreUsuario = prompt("Ingrese su nombre de usuario").trim()
-    let contraseñaUsuario = prompt("Ingrese su contraseña").trim()
-    if (nombreUsuario === usuario1.nombreDeUsuario && contraseñaUsuario === usuario1.contraseñaDeUsuario || nombreUsuario === usuario2.nombreDeUsuario && contraseñaUsuario === usuario2.contraseñaDeUsuario) {
-        bienvenida(nombreUsuario)
-    } else {
-        let nuevoIntento = confirm("El usuario o la contraseña no es valido. ¿Desea intentarlo de nuevo?")
-        if (nuevoIntento === true) {
-            login()
-        }
-    }
+    let correoElectronico = prompt("Ingrese su correo electronico").trim()
+    let usuarioEncontrado = usuariosRegistradosTotal.find(usuario => usuario.email == correoElectronico)
+   if(usuarioEncontrado != null){
+     constraseñaRecibida = prompt("ingrese sus contraseña").trim()
+     if(constraseñaRecibida === usuarioEncontrado.contraseñaDeUsuario){
+        bienvenida(usuarioEncontrado)
+     }
+    }else{alert("no existe")}
+
 }
-const bienvenida = (nombreUsuario) => {
-    alert("Bienvenido " + nombreUsuario)
+const bienvenida = () => {
+    alert("Bienvenido " + usuarioEncontrado.nombreDeUsuario)
 }
 const btnRegistro = document.querySelector(".botonRegistro")
 btnRegistro.addEventListener("click", function (e) {
