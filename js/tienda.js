@@ -22,13 +22,12 @@ const agregarAlCarritoAMD = (btnId) => {
     } else {  let tarjetaSumar = tarjetasVideoNvidia.find(tarjeta => tarjeta.id == btnId)
          carrito.push(tarjetaSumar) }}
 const cargarTiendaPreciosMenor = () =>{
-    tarjetasVideosPrecios.forEach(tarjeta => {
+    tarjetasVideosPreciosMenor.forEach(tarjeta => {
         if(tarjeta.stock != 0){
             tiendaPrecios.innerHTML += plantillaProducto(tarjeta) } })}
 
             const cargarTiendaPreciosMayor = () =>{
-               const tarjetasPrecioMayor = tarjetasVideosPrecios.reverse()
-               tarjetasPrecioMayor.forEach(tarjeta => {
+               tarjetasVideosPreciosMayor.forEach(tarjeta => {
                 if(tarjeta.stock != 0){
                     tiendaPrecios.innerHTML += plantillaProducto(tarjeta) } })
             }
