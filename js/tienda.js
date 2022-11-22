@@ -22,29 +22,25 @@ const agregarAlCarritoAMD = (btnId) => {
     } else {  let tarjetaSumar = tarjetasVideoNvidia.find(tarjeta => tarjeta.id == btnId)
          carrito.push(tarjetaSumar) }}
 const cargarTiendaPreciosMenor = () =>{
-    tiendaPrecios.innerHTML = ""
-    tiendaAMD.innerHTML = ""
-    tiendaNvidia.innerHTML = ""
     tarjetasVideosPrecios.forEach(tarjeta => {
         if(tarjeta.stock != 0){
             tiendaPrecios.innerHTML += plantillaProducto(tarjeta) } })}
 
             const cargarTiendaPreciosMayor = () =>{
-                tiendaPrecios.innerHTML = ""
-                tiendaAMD.innerHTML = ""
-                tiendaNvidia.innerHTML = ""
                const tarjetasPrecioMayor = tarjetasVideosPrecios.reverse()
                tarjetasPrecioMayor.forEach(tarjeta => {
                 if(tarjeta.stock != 0){
                     tiendaPrecios.innerHTML += plantillaProducto(tarjeta) } })
             }
 const cargarTiendaAMD = () => {
+    tiendaPrecios.innerHTML = ""
     tiendaAMD.innerHTML = ""
     tarjetasVideoAMD.forEach(tarjeta => {
         if (tarjeta.stock != 0) {
             tiendaAMD.innerHTML += plantillaProducto(tarjeta) } })}
 
 const cargarTiendaNvidia = () => {
+    tiendaPrecios.innerHTML = ""
     tiendaNvidia.innerHTML = ""
     tarjetasVideoNvidia.forEach(tarjeta => {
         if (tarjeta.stock != 0) {
@@ -64,12 +60,10 @@ const botonesSumarCarrito = () => {
 }
 botonesSumarCarrito()
 botonMenorF.addEventListener("click",()=>{
-    cargarTiendaPreciosMenor()
-    botonesSumarCarrito()
+    filtrarMenor()
 })
 botonMayorF.addEventListener("click",()=>{
-    cargarTiendaPreciosMayor()
-    botonesSumarCarrito()
+   filtrarMayor()
 })
 
 botonAMDF.addEventListener("click",()=>{
@@ -82,17 +76,36 @@ botonVerTodo.addEventListener("click",()=>{
     filtrarTodo()
 })
 const filtrarAmd = () =>{
+    tiendaPrecios.innerHTML = ""
     tiendaNvidia.innerHTML = ""
     cargarTiendaAMD()
     botonesSumarCarrito()
 }
 const filtrarNvidia = () => {
+    tiendaPrecios.innerHTML = ""
     tiendaAMD.innerHTML = ""
     cargarTiendaNvidia()
     botonesSumarCarrito()
 }
 const filtrarTodo = () => {
+    tiendaNvidia.innerHTML = ""
+    tiendaAMD.innerHTML = ""
+    tiendaPrecios.innerHTML = ""
     cargarTiendaAMD()
     cargarTiendaNvidia()
+    botonesSumarCarrito()
+}
+const filtrarMenor = () =>{
+    tiendaNvidia.innerHTML = ""
+    tiendaAMD.innerHTML = ""
+    tiendaPrecios.innerHTML = ""
+    cargarTiendaPreciosMenor()
+    botonesSumarCarrito()
+}
+const filtrarMayor = () =>{
+    tiendaNvidia.innerHTML = ""
+    tiendaAMD.innerHTML = ""
+    tiendaPrecios.innerHTML = ""
+    cargarTiendaPreciosMayor()
     botonesSumarCarrito()
 }
