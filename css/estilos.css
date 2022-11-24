@@ -13,6 +13,12 @@ main{
 .sidebar{
     width: 30%;
 }
+.logo{
+    width: 5.5rem;
+    height: 5.5rem;
+
+}
+
 h1 {
     font-size: xx-large;
     text-align: center;
@@ -36,6 +42,8 @@ ul {
     align-items: center;
     flex-direction: row-reverse;
     justify-content: flex-start;
+    list-style: none;
+    
 }
 
 .botonlogin {
@@ -61,6 +69,7 @@ ul {
 li {
     margin: 0.3rem;
     padding: 0.3rem;
+  
 }
 
 a{
@@ -86,9 +95,9 @@ p {
     margin: 1rem;   
 }
 footer{
-    background-color: rgba(0, 0, 0, 0.411);
+    
     color: aliceblue;
-    margin-top: 100%;
+    margin-top: 10%;
 }
 body{
     background-color: rgba(0, 0, 0, 0.644);
@@ -121,6 +130,7 @@ h2{
 h4{
     margin-bottom: 1rem;
     color: black;
+    width: 50%;
 }
 .tarjetasGraficas{
     display: flex;
@@ -133,9 +143,19 @@ h4{
     flex-direction: row;
     align-items: center;
     width: 85%;
+    font-size: larger;
+    font-weight: 900;
 }
 .tarjetasGraficas p {
+    font-size: larger;
+    font-weight: 900;
     color: black;
+}
+.tarjetasGraficas img{
+    transition: 1s;
+}
+.tarjetasGraficas img:hover{
+    scale: 1.1;
 }
 .botonAddCarrito{
     background-color: #555555;
@@ -175,6 +195,7 @@ h4{
 .iconCarrito img{
     width: 50px;
     transition: 0.7s;
+    height: 50px;
 }
 .iconCarrito img:hover{
     scale: 1.3;
@@ -198,4 +219,27 @@ button:hover{
 }
 h3{
     text-align: center;
+}.socialContainer{
+    display: flex;
+    justify-content: center;
+}.icon{
+    height:4rem;
+    width: 4rem;
+    margin: 1rem;
+    transition: 1s;
+}
+.icon:hover{
+    scale: 1.2;
+}
+.tienda{
+    display: flex;
+}
+.carrito{
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebarCarrito{
+    display: flex;
 }
